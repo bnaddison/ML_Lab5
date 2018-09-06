@@ -13,6 +13,33 @@ using namespace std;
 
 vector <vector<pair<float,float> > > hidden_layer_nodes;
 
+  vector <float> inputs;
+  vector <float> weights1;
+  vector <float> weights2;
+
+
+void readfile (string filename) {
+  string line;
+  ifstream in(filename);
+
+  while (getline(in, line)) {
+
+    istringstream ss(line);
+    string input, sw1, sw2;
+
+    ss >> input >> sw1 >> sw2;
+
+    float x = stof(input);
+    float w1 = stof(sw1);
+    float w2 = stof(sw2);
+
+    inputs.push_back(x);
+    weights1.push_back(w1);
+    weights2.push_back(w2);
+
+  }
+}
+
 float sigmoid (float net) {
   float o = 1/(1 + exp(-net) );
   return o;
@@ -37,9 +64,11 @@ float error_function(float o, float t) {
 
 int main () {
 
-  vector <float> inputs = {1.3f, 2.7f, 0.8f};
-  vector <float> weights1 = {0.1f, 0.2f, 0.5f};
-  vector <float> weights2 = {-0.4f, 1.0f, -0.6f};
+  // vector <float> inputs = {1.3f, 2.7f, 0.8f};
+  // vector <float> weights1 = {0.1f, 0.2f, 0.5f};
+  // vector <float> weights2 = {-0.4f, 1.0f, -0.6f};
+
+  readfile("training_examples");
 
   vector < pair<float,float> > node1;
   vector < pair<float,float> > node2;
