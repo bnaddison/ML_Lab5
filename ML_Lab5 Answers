@@ -1,0 +1,27 @@
+## ADDBRA001
+## Brandon Addison
+## CSC3022H
+## ML Lab 5
+
+Q1: Given the ANN input x, what are the output values of hidden 
+layer neurons 1 and 2 ?
+
+Hidden Layer Neuron 1 = 0.763145
+Hidden Layer Neuron 2 = 0.802184
+
+==================================================================
+
+Q2: Given that the weights from hidden layer nodes 1 and 2, respectively, are:
+w = [ 0.8, 1.0 ]
+And the bias value for the output node is: b = −0.3, and the ANN input x,
+what is the output value of the output neuron ?
+
+Output Neuron = 0.752632
+
+==================================================================
+
+Q3: Given this output, what is the Mean Squared Error for ANN input x.
+
+Mean Squared Error = 0.07708
+
+==================================================================
